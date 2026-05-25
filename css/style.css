@@ -2,21 +2,39 @@
 
 html, 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-size: 16px;
     font-family: 'Times New Roman', Times, serif;
     scroll-behavior: smooth;
 }
+
 .wrapper {
     width: 1024px;
     margin: auto;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0;
 }
 
-/*
-* menu
-*/
+a {
+    text-decoration: none;
+    font-family: "Fjalla One", sans-serif;
+    color: #333;
+    text-shadow: none;
+}
+
+.button {
+    background-color: #FFCE10;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Fjalla One", sans-serif;
+    display: inline-block;
+}
+
+.button-x1 {
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
 nav {
     background-color: #222831;
     color: #FFF;
@@ -24,6 +42,7 @@ nav {
     top: 0;
     z-index: 100;
 }
+
 nav > .wrapper {
     display: flex;
     justify-content: space-between;
@@ -38,8 +57,8 @@ nav > .wrapper {
 .menu > ul {
     display: flex;
     list-style-type: none;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     justify-content: space-between;
 }
 
@@ -52,13 +71,11 @@ nav > .wrapper {
     display: flex;
     align-items: center;
 }
+
 .logo > img {
     height: 45px;
 }
 
-/*
-* Hero / jumbotron
-*/
 header {
     background: url("../images/bg-header.jpeg");
     height: 100vh;
@@ -69,6 +86,7 @@ header {
     letter-spacing: 5px;
     text-shadow: 0 0 4px #000;
 }
+
 .header-opacity {
     background-color: #222831;
     width: 100%;
@@ -78,6 +96,7 @@ header {
     top: 0;
     left: 0;
 }
+
 .header-jumbotron {
     position: absolute;
     top: 0;
@@ -94,13 +113,14 @@ header {
 .header-jumbotron > h4 {
     color: #FFCE10;
     font-size: 2rem;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
+
 .header-jumbotron > h5 {
     color: #FFF;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-size: 2.5rem;
     line-height: 4rem;
     text-transform: uppercase;
@@ -109,31 +129,10 @@ header {
 .header-jumbotron > p {
     font-size: 1.3rem;
     padding: 5px;
-    margin: 0px 5px 20px 5px;
+    margin: 0 5px 20px 5px;
     color: #FFF;
 }
 
-a {
-    text-decoration: none;
-    font-family: "Fjalla One", sans-serif;
-color: #333;
-text-shadow: none;
-}
-
-.button {
-    background-color: #FFCE10;
-    padding: 5px 10px 5px 10px;
-    border-radius: 5px;
-    font-family: "Fjalla One", sans-serif;
-}
-.button-x1 {
-    font-size: 1.5rem;
-    padding: 20px;
-}
-
-/*
-* statistic
-*/
 #statistic {
     background-color: #393E46;
     color: #FFF;
@@ -152,8 +151,8 @@ text-shadow: none;
 
 #statistic > .wrapper > div > p {
     font-size: 2.5rem;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #statistic > .wrapper > div > p > i {
@@ -165,42 +164,43 @@ text-shadow: none;
     font-size: 2.5rem;
 }
 
-/*
-* premium course
-*/
 #premium-course {
     background-color: #222831;
     color: #FFF;
 }
 
-#premium-course > .wrapper {
-    padding: 50px 0px 50px 0px;
+#premium-course > .wrapper,
+#free-course > .wrapper {
+    padding: 50px 0;
 }
 
-#premium-course > .wrapper > h4 {
+#premium-course > .wrapper > h4,
+#free-course > .wrapper > h4 {
     text-align: center;
     font-size: 2.5rem;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Fjalla One", sans-serif;
 }
 
-#premium-course > .wrapper > h4 > span {
+#premium-course > .wrapper > h4 > span,
+#free-course > .wrapper > h4 > span {
     color: #ffce10;
 }
 
-#premium-course > .wrapper > p {
+#premium-course > .wrapper > p,
+#free-course > .wrapper > p {
     text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 25px;
+    margin: 0 0 25px 0;
+    padding: 0;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 50px;
 }
+
 .grid > .item {
     border: 1px solid #666;
     background-color: #393E46;
@@ -226,6 +226,8 @@ text-shadow: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .grid > .item > .item-detail > div > small {
@@ -241,31 +243,27 @@ text-shadow: none;
     font-weight: normal;
 }
 
-/*
-* tentang-saya
-*/
 #tentang-saya {
     background-color: #EEEEEE;
     color: #333;
 }
 
 #tentang-saya > .wrapper {
-    padding: 50px 0px 50px 0px;
+    padding: 50px 0;
 }
 
 #tentang-saya > .wrapper > h4 {
     text-align: center;
     font-size: 2.5rem;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Fjalla One", sans-serif;
 }
 
 #tentang-saya > .wrapper > p {
     text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 25px;
+    margin: 0 0 25px 0;
+    padding: 0;
 }
 
 #tentang-saya > .wrapper > div {
@@ -282,6 +280,7 @@ text-shadow: none;
 
 #tentang-saya > .wrapper > div > .foto > img {
     max-width: 100%;
+    height: auto;
 }
 
 #tentang-saya > .wrapper > div > .desc {
@@ -293,7 +292,7 @@ text-shadow: none;
 }
 
 #tentang-saya > .wrapper > div > .desc > p {
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px 0;
     font-size: 1.2rem;
     line-height: 1.9rem;
 }
@@ -309,46 +308,75 @@ text-shadow: none;
     color: #00ADB5;
 }
 
-/*
-* free course
-*/
+.skill {
+    background-color: #222831;
+    color: #FFF;
+}
+
+.skill > .wrapper {
+    padding: 50px 0;
+}
+
+.skill h2 {
+    text-align: center;
+    padding: 1.5rem;
+    margin: 0;
+    font-family: "Fjalla One", sans-serif;
+}
+
+.skill h2 > span {
+    color: #FFCE10;
+}
+
+.grid-skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-skills > .item {
+    border: 1px solid #666;
+    background-color: #393E46;
+    border-radius: 5px;
+}
+
+.grid-skills > .item > .item-detail {
+    padding: 20px;
+    font-size: 1.1rem;
+}
+
+.grid-skills > .item > .item-detail > h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.grid-skills > .item > .item-detail > small {
+    color: #CCC;
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.grid-skills > .item > .item-detail > p {
+    font-weight: normal;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
 #free-course {
     background-color: #393E46;
     color: #FFF;
 }
 
-#free-course > .wrapper {
-    padding: 50px 0px 50px 0px;
-}
-
-#free-course > .wrapper > h4 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 0px;
-    padding: 0px;
-    font-family: "Fjalla One", sans-serif;
-}
-
-#free-course > .wrapper > h4 > span {
-    color: #ffce10;
-}
-
-#free-course > .wrapper > p {
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    margin-bottom: 25px;
-}
-
 #free-course > .wrapper > .grid > .item {
     background-color: #222831;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 #free-course > .wrapper > .grid > .item > .item-detail {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     font-size: 1.4rem;
     width: 100%;
 }
@@ -360,12 +388,9 @@ text-shadow: none;
 }
 
 #free-course > .wrapper > .grid > .item > .item-detail > div {
-    padding: 10px 20px 10px 20px;
+    padding: 10px 20px;
 }
 
-/*
-* copyright
-*/
 footer {
     background-color: #222831;
     color: #FFF;
@@ -373,12 +398,8 @@ footer {
 }
 
 footer > .wrapper {
-    padding: 30px 0px 30px 0px;
+    padding: 30px 0;
 }
-
-/*
-* hamburger-menu
-*/
 
 button.hamburger-menu {
     background: none;
@@ -396,9 +417,6 @@ button.hamburger-menu > i.icon-close {
     display: none;
 }
 
-/*
-* 1024, 900, 768, 600, 450
-*/
 @media only screen and (max-width: 1024px){
     .wrapper {
         width: 90%;
@@ -408,8 +426,8 @@ button.hamburger-menu > i.icon-close {
 @media only screen and (max-width: 900px){
     #statistic > .wrapper > div > p {
         font-size: 1.5rem;
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
     }
 
     #statistic > .wrapper > div > p > i {
@@ -421,8 +439,13 @@ button.hamburger-menu > i.icon-close {
     }
 
     .grid {
-        grid-template-columns: 45% 45%;
+        grid-template-columns: repeat(2, 1fr);
     }
+    
+    .grid-skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .item > img {
         width: 8%;
     }
@@ -432,7 +455,7 @@ button.hamburger-menu > i.icon-close {
     .menu {
         width: 60%;
     }
-    .header-jumbotron> h4 {
+    .header-jumbotron > h4 {
         font-size: 1.5rem;
     }
     .header-jumbotron > h5 {
@@ -454,7 +477,7 @@ button.hamburger-menu > i.icon-close {
 
     #statistic > .wrapper > div > p {
         font-size: 1.5rem;
-        margin: 0px;
+        margin: 0;
     }
     #statistic > .wrapper > div > p > i {
         font-size: 1.5rem;
@@ -463,6 +486,10 @@ button.hamburger-menu > i.icon-close {
 
 @media only screen and (max-width: 600px){
     .grid {
+        grid-template-columns: 100%;
+    }
+
+    .grid-skills {
         grid-template-columns: 100%;
     }
 
@@ -489,14 +516,10 @@ button.hamburger-menu > i.icon-close {
         width: 50%;
     }
 
-    #tentang-saya > .wrapper > div > .foto > img {
-        max-width: 100%;
-    }
-
     #tentang-saya > .wrapper > div > .desc {
-        width: 70%;
+        width: 90%;
         padding: 20px;
-        margin: 10px;
+        margin: 10px 0;
     }
 
     #tentang-saya > .wrapper > div > .desc > .social {
@@ -504,25 +527,30 @@ button.hamburger-menu > i.icon-close {
     }
 
     button.hamburger-menu {
-        display: inline;
+        display: inline-block;
     }
+    
     .menu {
         display: none;
     }
 
-    .tampil {
-        display: inline;
-    }
-    .tampil > ul {
-        flex-direction: column;
-        background-color: #000;
-        width: 100%;
-        position: fixed;
-        top: 85px;
+    .menu.tampil {
+        display: block;
+        position: absolute;
+        top: 100%;
         left: 0;
+        width: 100%;
+        background-color: #000;
+        z-index: 999;
+    }
+    
+    .menu.tampil > ul {
+        flex-direction: column;
+        width: 100%;
     }
 
-    .tampil > ul > li {
-        padding: 10px 20px 10px 20px;
+    .menu.tampil > ul > li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #222;
     }
 }
